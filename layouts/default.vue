@@ -1,20 +1,16 @@
 <template>
     <div>
         <div id="content-background">
-            <div id="content-container">
-                <AppHeader />
-                <Nuxt />
-            </div>
+             <Nuxt />
         </div>
     </div>
 </template>
 
 <script>
-import AppHeader from "../components/AppHeader"
+
 
 export default {
   components: {
-    AppHeader
   }
 }
 </script>
@@ -38,7 +34,7 @@ body {
     font-size: 18px;
     color: var(--black);
 
-    background-image: url("../static/BacgroundImage.png");
+    background-image: url("../assets/BacgroundImage.png");
     background-repeat: no-repeat, repeat;
     background-size: cover; 
     background-color: var(--purple);
@@ -57,12 +53,20 @@ body {
 }
 #content-background{
     background-color: var(--white);
-    width: 80vw;
     border-radius: 5px;
     -webkit-box-shadow: 0px 0px 50px 3px rgba(0,0,0,0.6); 
     box-shadow: 0px 0px 50px 3px rgba(0,0,0,0.6);
 }
 #content-container{
     padding: 30px;
+}
+main{
+    width: 100%;
+    padding-bottom: 60px;
+}
+#content-title{
+    margin-bottom: 30px;
+    color: var(--purple);
+    text-transform: uppercase;
 }
 </style>
