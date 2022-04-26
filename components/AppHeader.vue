@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div id="logo"><i class="fa-solid fa-rocket-launch"></i> <strong>Space</strong> News</div>
+    <div id="logo"><font-awesome-icon :icon="['fas', 'rocket']"/> <strong>Space</strong> News</div>
   </header>
 </template>
 
