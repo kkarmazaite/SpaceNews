@@ -5,9 +5,21 @@
 <script>
 
 export default {
-  created() {
-    this.$router.push('/login')
-  }
+    head(){
+        return{
+            title:'Space News',
+            meta:[
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: 'Space news'
+                }
+            ]
+        }
+    },
+    created() {
+      this.$router.push('/login')
+    }
 
 }
 </script>

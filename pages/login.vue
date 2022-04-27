@@ -24,11 +24,19 @@
 </template>
 
 <script>
-import AppHeader from "../components/AppHeader"
 
 export default {
-    components: {
-    AppHeader
+    head(){
+        return{
+            title:'Login',
+            meta:[
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: 'Login'
+                }
+            ]
+        }
     },
     data(){
         return{

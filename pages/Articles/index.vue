@@ -15,6 +15,18 @@ import AppHeader from "../../components/AppHeader"
 import Article from "../../components/Article"
 
 export default {
+    head(){
+        return{
+            title:'Articles',
+            meta:[
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: 'Articles'
+                }
+            ]
+        }
+    },
     components: {
         AppHeader,
         Article
@@ -24,7 +36,7 @@ export default {
         articles: []
         };
     },
-    async fetch() {
+    async created() {
         this.articles = await fetch("https://api.spaceflightnewsapi.net/v3/articles").then(articles => articles.json());
     },
 }
