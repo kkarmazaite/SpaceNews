@@ -34,7 +34,7 @@ export default {
         flex-direction: column;
         justify-content: space-between;
         gap:10px;
-        width: 350px;
+        width: 30%;
     }
     .article:hover{
         -webkit-box-shadow: 0px 0px 6px 1px var(--purple); 
@@ -43,7 +43,7 @@ export default {
     }
     .article img{
         height: 250px;
-        width: 350px;
+        width: 100%;
         object-fit: cover;
         border-top-right-radius:inherit;
         border-top-left-radius:inherit;
@@ -60,4 +60,14 @@ export default {
         color: var(--grey);
         margin: 2px 5px;
     }
+@media only screen and (max-width: 1200px) {
+    .article{
+        width: 45%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .article{
+        width: 100%;
+    }
+}
 </style>

@@ -29,7 +29,7 @@ export default {
 :root {
     --black: rgb(67, 67, 67);
     --grey: rgb(178, 178, 178);
-    --purple: #8650a8;
+    --purple: #5d50a8;
     --white: #f8f7f8;
   }
 body {
@@ -59,7 +59,7 @@ body {
 }
 #content-container{
     padding: 30px;
-    height: 90vh;
+    height: 75vh;
     overflow-y: auto;
 }
 main{

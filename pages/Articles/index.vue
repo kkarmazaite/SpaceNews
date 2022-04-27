@@ -26,7 +26,6 @@ export default {
     },
     async fetch() {
         this.articles = await fetch("https://api.spaceflightnewsapi.net/v3/articles").then(articles => articles.json());
-        console.log(this.articles)
     },
 }
 </script>
