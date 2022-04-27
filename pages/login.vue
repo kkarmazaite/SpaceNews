@@ -1,26 +1,23 @@
 <template>
     <div id="content-container">
-
-        <AppHeader />
-
         <main>
             <h1 id="content-title">Login</h1>
-            <form id="login-form" action="">
+            <form  @submit.prevent="onSubmit" id="login-form">
                 <div class="input-row-container">
-                    <label for="">Username</label>
+                    <label for="userName">Username</label>
                     <div class="input-field-container">
                         <font-awesome-icon class="input-icon" :icon="['fas', 'user']"/>
-                        <input type="text">
+                        <input v-model="userName" name="userName" type="text">
                     </div>
                 </div>
                 <div class="input-row-container">
-                    <label for="">Password</label>
+                    <label for="password">Password</label>
                     <div class="input-field-container">
                         <font-awesome-icon class="input-icon" :icon="['fas', 'lock']"/>
-                        <input type="password">
+                        <input v-model="password" name="password" type="password">
                     </div>
                 </div>
-                <input type="submit" value="Login">
+                <input v-show="userName!='' && password!=''" type="submit" value="Login">
             </form>
         </main>
     </div>
@@ -30,13 +27,24 @@
 import AppHeader from "../components/AppHeader"
 
 export default {
-  components: {
+    components: {
     AppHeader
-  }
+    },
+    data(){
+        return{
+            userName: '',
+            password: '',
+        }
+    },
+    methods: {
+        onSubmit() {
+            this.$router.push('/articles')
+        }
+    }
 }
 </script>
 
-<style>
+<style scope>
     #content-background{
         width: 40vw;
     }

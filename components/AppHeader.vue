@@ -13,9 +13,11 @@ export default {
 
 <style>
     header{
-        padding: 20px 0;
-        margin-bottom: 40px;
+        padding: 20px 30px;
         border-bottom: 1px solid var(--grey);
+        position: sticky;
+        top: 0;
+        background-color: var(--white);
     }
     #logo{
         font-size: 25px;
