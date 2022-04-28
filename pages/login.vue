@@ -17,13 +17,15 @@
                         <input v-model="password" name="password" type="password">
                     </div>
                 </div>
-                <input v-show="userName!='' && password!=''" type="submit" value="Login">
+                <input v-show="userName!=='' && password!==''" type="submit" value="Login">
             </form>
         </main>
     </div>
 </template>
 
 <script>
+
+import {ref} from "vue"
 
 export default {
     head(){
@@ -38,6 +40,20 @@ export default {
             ]
         }
     },
+    // setup(){
+    //     const userName = ref("")
+    //     const password = ref("")
+
+    //     function onSubmit(){
+    //         this.$router.push('/articles')
+    //     }
+
+    //     return{
+    //         userName: userName,
+    //         password: password,
+    //         onSubmit: onSubmit
+    //     }
+    // }
     data(){
         return{
             userName: '',
@@ -89,6 +105,7 @@ export default {
     }
     .input-field-container input:focus{
         border-bottom: 3px solid var(--purple);
+        background-color: transparent;
     }
     #login-form input[type=submit]{
         background-color: var(--purple);

@@ -4,6 +4,7 @@
         <div id="content-background">
             <AppHeader />
             <Nuxt />
+            <AppFooter />
         </div>
     </div>
 </template>
