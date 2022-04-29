@@ -1,12 +1,16 @@
-<template>
-    <div>
-        
-        <div id="content-background">
+<template>  
+
+    <div id="content">
+        <div id="content-container"> 
+            <div>
             <AppHeader />
-            <Nuxt />
+                <Nuxt />
+            </div>
+ 
             <AppFooter />
-        </div>
-    </div>
+
+        </div>        
+    </div>          
 </template>
 
 <script>
@@ -42,26 +46,27 @@ body {
     background-repeat: no-repeat, repeat;
     background-size: cover; 
     background-color: var(--purple);
+    overflow-y: auto;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height:100vh;
    }
-#content-background{
-    margin: 20px 0;
+#content{
+    padding: 5vh 10vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+#content-container{
+    min-height: 90vh;
+    padding: 10px 30px;
     background-color: var(--white);
     border-radius: 5px;
     -webkit-box-shadow: 0px 0px 50px 3px rgba(0,0,0,0.6); 
     box-shadow: 0px 0px 50px 3px rgba(0,0,0,0.6);
-    height: 90vh;
-    overflow-y: hidden;
 
-}
-#content-container{
-    padding: 30px;
-    height: 75vh;
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 main{
     width: 100%;

@@ -1,5 +1,4 @@
 <template>
-      <div id="content-container">
         <main>
             <h1 id="content-title">{{this.article.title}}</h1>
             <div id="article-info">
@@ -9,7 +8,6 @@
                 <button @click="goToFullArticle()">Read full article</button>
             </div>
         </main>
-    </div>
 </template>
 
 <script>
@@ -47,9 +45,9 @@ export default {
 }
 </script>
 
-<style>
-    #content-background{
-        width: 80vw !important;
+<style scope>
+    #content{
+        padding: 5vh 10vw;
     }
     #article-info{
         display: flex;

@@ -13,7 +13,7 @@ export default {
 
 <style scoped>
     footer{
-        padding: 10px 30px;
+        padding: 10px 0px;
         border-top: 1px solid var(--grey);
         background-color: var(--white);
     }

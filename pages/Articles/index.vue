@@ -1,12 +1,10 @@
 <template>
-      <div id="content-container">
         <main>
             <h1 id="content-title">Articles</h1>
             <div id="article-list">
                 <Article v-for="article in articles" :key="article.id" :article="article" />
             </div>
         </main>
-    </div>
 </template>
 
 <script>
@@ -43,8 +41,8 @@ export default {
 </script>
 
 <style scope>
-    #content-background{
-        width: 80vw !important;
+    #content{
+        padding: 5vh 10vw;
     }
     #article-list{
         width: 100%;

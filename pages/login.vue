@@ -1,5 +1,4 @@
 <template>
-    <div id="content-container">
         <main>
             <h1 id="content-title">Login</h1>
             <form  @submit.prevent="onSubmit" id="login-form">
@@ -20,7 +19,6 @@
                 <input v-show="userName!=='' && password!==''" type="submit" value="Login">
             </form>
         </main>
-    </div>
 </template>
 
 <script>
@@ -69,8 +67,8 @@ export default {
 </script>
 
 <style scope>
-    #content-background{
-        width: 40vw;
+    #content{
+        padding: 5vh 30vw;
     }
     #login-form{
         width: 100%;
